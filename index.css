@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EdTech Platform - Learn Anytime, Anywhere</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header Section */
+    header {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #333;
+      margin-top: 0;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #666;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      /* Add styles for your hero image or video here */
+    }
+
+    /* Features and Benefits Section */
+    #features {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    #features h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    #features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #features li {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background-color: #f1f1f1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* How It Works Section */
+    .how-it-works {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .how-it-works h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Course Offerings Section */
+    .course-offerings {
+      background-color: #f1f1f1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .course-offerings h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .pricing h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Call-to-Action Section */
+    .cta-section {
+      background-color: #f1f1f1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Frequently Asked Questions (FAQs) Section */
+    .faq {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .faq h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    footer h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    footer p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    /* Add your custom styles here */
+
+  </style>
+</head>
+<body>
+  <!-- Add your HTML content here -->
+
+</body>
+</html>
