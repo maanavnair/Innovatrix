@@ -6,35 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="registration.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
     <script src="../custom-scripts.js" defer></script>
-  </head>
-  <body>
-    <section class="wrapper">
-      <div class="form signup">
-        <header>Signup</header>
-        <form action="#">
-          <input type="text" placeholder="Full name" required />
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
-          <div class="checkbox">
-            <input type="checkbox" id="signupCheck" />
-            <label for="signupCheck">I accept all terms & conditions</label>
-          </div>
-          <input type="submit" value="Signup" />
-        </form>
-      </div>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="form signup">
+      <header>Signup</header>
+      <form id="signup-form">
+        <input type="text" id="signup-name" placeholder="Full name" required />
+        <input type="text" id="signup-email" placeholder="Email address" required />
+        <input type="password" id="signup-password" placeholder="Password" required />
+        <div class="checkbox">
+          <input type="checkbox" id="signupCheck" />
+          <label for="signupCheck">I accept all terms & conditions</label>
+        </div>
+        <input type="submit" value="Signup" />
+      </form>
+    </div>
 
-      <div class="form login">
-        <header>Login</header>
-        <form action="#">
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
-          <a href="#">Forgot password?</a>
-          <input type="submit" value="Login" />
-        </form>
-      </div>
+    <div class="form login">
+      <header>Login</header>
+      <form id="login-form">
+        <input type="text" id="login-email" placeholder="Email address" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <a href="#">Forgot password?</a>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
 
-      <script>
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+  apiKey: "AIzaSyAXhXkD_MNKIpzz0q_KkgIdYrm5gzmuW7c",
+  authDomain: "innovatrix-85fd9.firebaseapp.com",
+  projectId: "innovatrix-85fd9",
+  storageBucket: "innovatrix-85fd9.appspot.com",
+  messagingSenderId: "758290896343",
+  appId: "1:758290896343:web:c3b539c143e76fd6b52792"
+};
+      firebase.initializeApp(firebaseConfig);
+
+      // Function to handle signup form submission
+      document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('signup-name').value;
+        var email = document.getElementById('signup-email').value;
+        var password = document.getElementById('signup-password').value;
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then(function(userCredential) {
+            // Redirect to the home page or perform additional operations
+            console.log('Signup successful:', userCredential);
+          })
+          .catch(function(error) {
+            // Handle signup errors
+            var errorMessage = error.message;
+            console.log('Signup error:', errorMessage);
+          });
+      });
+
+      // Function to handle login form submission
+      document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var email = document.getElementById('login-email').value;
+        var password = document.getElementById('login-password').value;
+
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then(function(userCredential) {
+            // Redirect to the home page or perform additional operations
+            console.log('Login successful:', userCredential);
+          })
+          .catch(function(error) {
+            // Handle login errors
+            var errorMessage = error.message;
+            console.log('Login error:', errorMessage);
+          });
+      });
+
+
         const wrapper = document.querySelector(".wrapper"),
           signupHeader = document.querySelector(".signup header"),
           loginHeader = document.querySelector(".login header");
@@ -45,7 +96,7 @@
         signupHeader.addEventListener("click", () => {
           wrapper.classList.remove("active");
         });
-      </script>
-    </section>
-  </body>
+    </script>
+  </section>
+</body>
 </html>
