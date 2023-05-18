@@ -1,293 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: 'DM Sans',sans-serif;
+    font-weight: 400;
+    color: #ebebeb;
+}
+body{
+    background: rgb(114, 114, 224) ;
+    margin: 0;
 
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      list-style: none;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-    }
-     /* Navbar */
-     nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 15%;
-      height: 75px;
-      line-height: 75px;
-      background: #404040;
-  }
-  nav ul li{
-    list-style: none;
-  }
-  nav ul li a{
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+    margin-top: 100px;
+}
+a{
+    display: inline-block;
     text-decoration: none;
-  }
-  nav .navbar-brand {
-      color: #ffffff;
-      font-size: 28px;
-      font-weight: 500;
-      letter-spacing: .5px;
-  }
-  
-  nav .nav-list {
-      display: flex;
-  }
-  
-  nav .nav-list .nav-item {
-      cursor: pointer;
-      height: 100%;
-      padding: 0 30px;
-      transition: .4s;
-  }
-  
-  nav .nav-list .nav-item:hover {
-      background: #b69955;
-  }
-  
-  nav .nav-list .nav-link {
-      color: #f1f1f1;
-      font-size: 18px;
-      font-weight: 500;
-  }
-  nav .navbar-toggler {
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,p{
+    margin: 0;
+}
+.row{
+    display: flex;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.menu-bar{
+    background: rgb(89, 89, 207) ;
+    text-align: center;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover{
+    background: rgb(44, 44, 234) ;
+    border-radius: 3px;
+}
+.sub-menu{
     display: none;
-    height: min-content;
-    margin: 18px -10px 0 0;
-    cursor: pointer;
-}
 
-nav .navbar-toggler .bar {
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    border-radius: 10%;
-    transition: .4s;
-    z-index: 2;
 }
-
-input {
-    display: none;
-}
-
-input:checked ~ nav .nav-list {
-    transform: translateY(0);
-}
-
-input:checked ~ nav .navbar-toggler {
-    margin-top: 35px;
-}
-
-input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
+.menu-bar ul li:hover .sub-menu{
+    display: block;
     position: absolute;
-    transform: rotate(45deg);
+    background:  rgb(44, 44, 234);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
 }
 
-input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
-    display: none;
+.menu-bar ul li:hover .sub-menu ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu ul li a:hover{
+    color: #2bff00;
 }
 
-input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
-    transform: rotate(-45deg);
+.hero{
+    gap: 2em;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    min-height: calc(100vh  -93.6px);
 }
-    /* Header Section */
-    header {
-      background-color: #f1f1f1;
-      padding: 20px;
-      text-align: center;
-    }
 
-    header h1 {
-      font-size: 36px;
-      color: #333;
-      margin-top: 0;
-    }
+.hero>*{
+    flex: 1 1 25em;
+}
 
-    header p {
-      font-size: 20px;
-      color: #666;
-    }
+.hero h1{
+    font-weight: 700;
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1;
+}
+.hero p{
+    font-weight: 500;
+    font-size: 30px;
+    padding: 1em 0;
+}
 
-    .cta-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 4px;
-      margin-top: 20px;
-    }
-
-    /* Hero Section */
-    .hero {
-      /* Add styles for your hero image or video here */
-    }
-
-    /* Features and Benefits Section */
-    #features {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: #fff;
-    }
-
-    #features h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    #features ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    #features li {
-      font-size: 20px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-      background-color: #f1f1f1;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .testimonials h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    /* How It Works Section */
-    .how-it-works {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: #fff;
-    }
-
-    .how-it-works h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    /* Course Offerings Section */
-    .course-offerings {
-      background-color: #f1f1f1;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .course-offerings h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    /* Pricing Section */
-    .pricing {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: #fff;
-    }
-
-    .pricing h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    /* Call-to-Action Section */
-    .cta-section {
-      background-color: #f1f1f1;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .cta-section h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    /* Frequently Asked Questions (FAQs) Section */
-    .faq {
-      padding: 40px 20px;
-      text-align: center;
-      background-color: #fff;
-    }
-
-    .faq h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    /* Footer Section */
-    footer {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
-      color: #fff;
-    }
-
-    footer h3 {
-      font-size: 24px;
-      margin: 0;
-    }
-
-    footer p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    /* Add your custom styles here */
-
-/* MEDIA QUERY */
-@media (max-width: 935px) {
+/* Set up the typewriter animation */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
   
-  nav {
-      padding: 0 2rem;
+  /* Apply the typewriter animation to the .typewriter span */
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
   }
-
-  nav .nav-list .nav-item {
-      padding: 0 20px;
+  
+  .typewriter::after {
+    content: '|';
+    display: inline-block;
+    animation: cursor-blink 0.7s infinite;
   }
-
-}
-
-@media (max-width: 675px) {
-
-input:checked ~ nav .nav-list {
-transform: translateY(0%);
-z-index: 1;
-}  
-nav .nav-list {
-      display: grid;
-      position: absolute;
-      background: #404040;
-      width: 100%;
-      top: 75px;
-      left: 0;
-      transform: translateY(-100%);
-      z-index: -1;
-      transition: .6s;
+  
+  .typewriter.typing::after {
+    content: '';
   }
-
-  nav .nav-list .nav-item {
-      padding-left: 35px;
+  
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
   }
-
-  nav .navbar-toggler {
-      display: grid !important;
-  }
-
-}
-
-
+  
