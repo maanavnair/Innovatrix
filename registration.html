@@ -77,6 +77,7 @@
           .then(function(userCredential) {
             // Redirect to the home page or perform additional operations
             console.log('Login successful:', userCredential);
+             window.location.href = 'index.html';
           })
           .catch(function(error) {
             // Handle login errors
