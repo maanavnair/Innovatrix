@@ -7,6 +7,26 @@
     <title>CodeConnect</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="home.css">
+    
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+          w["botsonic_widget"] = o;
+          w[o] =
+            w[o] ||
+            function () {
+              (w[o].q = w[o].q || []).push(arguments);
+            };
+          (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+          js.id = o;
+          js.src = f;
+          js.async = 1;
+          fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "Botsonic", "https://writesonic.s3.amazonaws.com/frontend-assets/CDN/botsonic.min.js");
+        Botsonic("init", {
+          serviceBaseUrl: "https://api.writesonic.com",
+          token: "5af90c00-d077-4a87-bc25-5e0478f64ec0",
+        });
+      </script>
 </head>
 <body>
     <div class="menu-bar">
@@ -38,6 +58,16 @@
             <img src="./bg.jpg" alt="">
         </div>
     </section>
+
+    <!-- Chatbot Integration -->
+    <script>
+        Botsonic("config", {
+          targetElement: "chatbot-widget",
+        });
+    </script>
+    <div id="chatbot-widget"></div>
+    <!-- End Chatbot Integration -->
+
     <script src="index.js"></script>
 </body>
 </html>
