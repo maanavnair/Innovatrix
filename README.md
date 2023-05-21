@@ -38,5 +38,40 @@ To enhance the learning experience, the platform integrates a chatbot powered by
 
 - [BotSonic](https://writesonic.com/botsonic)
 
-### Contributors
+
+## Contributors👥👨‍💻
+
+<table>
+    <tbody>
+        <tr>
+            <td align="center">
+                <a href="https://github.com/mnik7044">
+                    <img src="https://avatars.githubusercontent.com/u/108953684?v=4" width="100px;" alt="Nikhil Mishra"/>
+                    <br />
+                    <sub><b>Nikhil  Mishra</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/utkarshkrishna2004">
+                    <img src="https://avatars.githubusercontent.com/u/115831701?v=4" width="100px;" alt="Utkarsh Krishna"/>
+                    <br />
+                    <sub><b>Utkarsh Krishna</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/Atif-27">
+                    <img src="https://avatars.githubusercontent.com/u/116288316?v=4" width="100px;" alt="Atif Ali"/>
+                    <br />
+                    <sub><b>Atif Ali</b></sub>
+                </a>
+            </td>
+           <td align="center">
+                <a href="https://github.com/maanavnair">
+                    <img src="https://avatars.githubusercontent.com/u/114719385?v=4" width="100px;" alt="Maanav Nair"/>
+                    <br />
+                    <sub><b>Maanav Nair</b></sub>
+                </a>
+            </td>
+</table>
+
 
